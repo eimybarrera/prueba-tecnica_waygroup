@@ -108,7 +108,7 @@ export default function EmpresaForm({
         <button
           type="submit"
           disabled={pending}
-          className="rounded-lg bg-blue-700 px-4 py-2 text-white hover:bg-blue-800 disabled:cursor-wait disabled:opacity-60"
+          className="rounded-lg bg-brand px-4 py-2 text-white hover:bg-brand-dark disabled:cursor-wait disabled:opacity-60"
         >
           {pending ? "Guardando..." : submitLabel}
         </button>

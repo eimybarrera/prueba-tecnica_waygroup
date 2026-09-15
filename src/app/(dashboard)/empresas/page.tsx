@@ -61,21 +61,16 @@ export default async function EmpresasPage({
   }
 
   return (
-    <main className="min-h-screen bg-gray-100 px-4 py-8 text-gray-900">
+    <main className="min-h-screen bg-canvas px-4 py-8 text-gray-900">
       <section className="mx-auto max-w-5xl rounded-2xl bg-white p-6 shadow-sm">
-        <Link
-          href="/dashboard"
-          className="text-sm font-medium text-blue-700 hover:underline"
-        >
-          Volver al panel
-        </Link>
 
-        <h1 className="mt-4 text-2xl font-bold">Empresas</h1>
+
+        <h1 className="text-2xl font-bold">Empresas</h1>
 
         <div className="mt-4">
           <Link
             href="/empresas/nueva"
-            className="inline-block rounded-lg bg-blue-700 px-4 py-2 text-white hover:bg-blue-800"
+            className="inline-block rounded-lg bg-brand px-4 py-2 text-white hover:bg-brand-dark"
           >
             Nueva empresa
           </Link>
@@ -140,7 +135,7 @@ export default async function EmpresasPage({
 
           <button
             type="submit"
-            className="rounded-lg bg-blue-700 px-4 py-2 text-white hover:bg-blue-800"
+            className="rounded-lg bg-brand px-4 py-2 text-white hover:bg-brand-dark"
           >
             Buscar
           </button>
@@ -184,7 +179,7 @@ export default async function EmpresasPage({
                 {pagina > 1 ? (
                   <Link
                     href={enlacePagina(pagina - 1)}
-                    className="text-blue-700 hover:underline"
+                    className="text-brand hover:underline"
                   >
                     Anterior
                   </Link>
@@ -199,7 +194,7 @@ export default async function EmpresasPage({
                 {pagina < totalPaginas ? (
                   <Link
                     href={enlacePagina(pagina + 1)}
-                    className="text-blue-700 hover:underline"
+                    className="text-brand hover:underline"
                   >
                     Siguiente
                   </Link>

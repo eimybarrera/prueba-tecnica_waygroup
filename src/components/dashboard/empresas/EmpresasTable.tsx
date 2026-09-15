@@ -11,7 +11,7 @@ export default function EmpresasTable({ empresas }: EmpresasTableProps) {
       <table className="w-full text-left text-sm">
         <caption className="sr-only">Listado de empresas</caption>
 
-        <thead className="bg-gray-100 text-gray-700">
+        <thead className="bg-canvas text-gray-700">
           <tr>
             <th scope="col" className="px-4 py-3">
               Nombre
@@ -31,7 +31,7 @@ export default function EmpresasTable({ empresas }: EmpresasTableProps) {
               <td className="px-4 py-3 font-medium">
                 <Link
                   href={`/empresas/${empresa.id}`}
-                  className="text-blue-700 underline underline-offset-2 hover:text-blue-900"
+                  className="text-brand underline underline-offset-2 hover:text-blue-900"
                 >
                   {empresa.nombre}
                 </Link>

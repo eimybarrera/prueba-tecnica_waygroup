@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function EmpresaNotFound() {
   return (
-    <main className="min-h-screen bg-gray-100 px-4 py-8 text-gray-900">
+    <main className="min-h-screen bg-canvas px-4 py-8 text-gray-900">
       <section className="mx-auto max-w-xl rounded-2xl bg-white p-6 shadow-sm">
         <h1 className="text-2xl font-bold">
           Empresa no encontrada
@@ -14,7 +14,7 @@ export default function EmpresaNotFound() {
 
         <Link
           href="/empresas"
-          className="mt-6 inline-block text-blue-700 hover:underline"
+          className="mt-6 inline-block text-brand hover:underline"
         >
           Volver a empresas
         </Link>

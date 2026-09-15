@@ -1,7 +1,6 @@
-import Link from "next/link";
+import ResumenPanel from "@/components/dashboard/home/ResumenPanel";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
-import { logout } from "@/lib/actions/auth";
 
 export default async function DashboardPage() {
   const supabase = await createClient();
@@ -15,39 +14,19 @@ export default async function DashboardPage() {
     redirect("/login");
   }
 
-  return (
-    <main className="min-h-screen bg-gray-100 p-6 text-gray-900">
-      <section className="mx-auto max-w-4xl rounded-2xl bg-white p-8 shadow-sm">
-        <h1 className="text-2xl font-bold">
-          Panel de administración
-        </h1>
+return (
+  <main className="p-5 sm:p-8 lg:p-10">
+    <section className="mx-auto max-w-6xl">
+      <p className="text-sm font-medium text-muted">
+        Panel de administración
+      </p>
 
-        <p className="mt-3 text-gray-600">
-          Sesión iniciada como: {user.email}
-        </p>
+      <h1 className="mt-2 max-w-3xl text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+        Consulta el resumen de tus empresas y empleados
+      </h1>
 
-        <p className="mt-2 text-gray-600">
-          Aquí construiremos el resumen de empresas y empleados.
-        </p>
-
-        <div className="mt-6">
-          <Link
-            href="/empresas"
-            className="inline-block rounded-lg bg-blue-700 px-4 py-2 text-white hover:bg-blue-800"
-          >
-            Ver empresas
-          </Link>
-        </div>
-
-        <form action={logout} className="mt-6">
-          <button
-            type="submit"
-            className="rounded-lg bg-gray-900 px-4 py-2 text-white hover:bg-gray-700"
-          >
-            Cerrar sesión
-          </button>
-        </form>
-      </section>
-    </main>
-  );
+      <ResumenPanel />
+    </section>
+  </main>
+);
 }

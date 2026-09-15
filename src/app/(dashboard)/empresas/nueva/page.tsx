@@ -16,11 +16,11 @@ export default async function NuevaEmpresaPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-100 px-4 py-8 text-gray-900">
+    <main className="min-h-screen bg-canvas px-4 py-8 text-gray-900">
       <section className="mx-auto max-w-xl rounded-2xl bg-white p-6 shadow-sm">
         <Link
           href="/empresas"
-          className="text-sm text-blue-700 hover:underline"
+          className="text-sm text-brand hover:underline"
         >
           Volver a empresas
         </Link>

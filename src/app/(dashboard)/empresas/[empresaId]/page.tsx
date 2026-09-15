@@ -14,11 +14,11 @@ export default async function EmpresaDetallePage({
   const result = await getEmpresaById(empresaId);
 
   return (
-    <main className="min-h-screen bg-gray-100 px-4 py-8 text-gray-900">
+    <main className="min-h-screen bg-canvas px-4 py-8 text-gray-900">
       <section className="mx-auto max-w-4xl rounded-2xl bg-white p-6 shadow-sm">
         <Link
           href="/empresas"
-          className="text-sm text-blue-700 hover:underline"
+          className="text-sm text-brand hover:underline"
         >
           Volver a empresas
         </Link>
@@ -36,12 +36,19 @@ export default async function EmpresaDetallePage({
               {result.empresa.nombre}
             </h1>
 
-            <div className="mt-4">
+            <div className="mt-4 flex flex-wrap gap-3">
               <Link
                 href={`/empresas/${result.empresa.id}/editar`}
-                className="inline-block rounded-lg bg-blue-700 px-4 py-2 text-white hover:bg-blue-800"
+                className="inline-block rounded-lg bg-brand px-4 py-2 text-white hover:bg-brand-dark"
               >
                 Editar empresa
+              </Link>
+
+              <Link
+                href={`/empresas/${result.empresa.id}/empleados`}
+                className="inline-block rounded-lg bg-brand px-4 py-2 text-white hover:bg-brand-dark"
+              >
+                Ver empleados
               </Link>
             </div>
 
